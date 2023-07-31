@@ -1,3 +1,60 @@
+/* Color Theme Swatches in Hex
+.Cobalt-blue-|-summer-illustration-set-1-hex { color: #3B82BF; }
+.Cobalt-blue-|-summer-illustration-set-2-hex { color: #6AA5D9; }
+.Cobalt-blue-|-summer-illustration-set-3-hex { color: #14B5D9; }
+.Cobalt-blue-|-summer-illustration-set-4-hex { color: #F2A172; }
+.Cobalt-blue-|-summer-illustration-set-5-hex { color: #8C2703; } */
+
+
 body {
   font-family: sans-serif, arial;
+  background-color: #3B82BF;
+  color: white
+}
+div.container {
+  background-color: #3B82BF;
+}
+.movieTitle {
+  color: Blue;
+}
+.movie {
+  background-color: #F2A172;
+  border: solid 3px #8C2703;
+  border-radius: 10px;;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movieTitle {
+  color: white;
+}
+.movieList {
+  color: white;
+  border: solid 3px green;
+
+}
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.topBar {
+  justify-content: center;
+  align-items: flex-start;
+}
+.toggleWatchIcons {
+  border: solid 3px yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 206px;
+}
+.watched {
+  justify-content: start;
+  color: purple;
+  border: solid 3px blue;
 }
