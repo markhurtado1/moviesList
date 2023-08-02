@@ -25,6 +25,9 @@ const App = () => {
   const [text, setText] = useState('')
   const [add, setAdd] = useState('')
   const [searchResults, setSearchResults] = useState('')
+  const [seen, setSeen] = useState([]);
+  const [notSeen, setNotSeen] = useState('')
+  const [display, setDisplay] = useState(true)
 
 
   const newSearch = function (keyword) {
@@ -43,24 +46,40 @@ const App = () => {
 
     }
 
+    const removeTitle = function(num) {
+      event.preventDefault();
+      setMovies(movies => [...movies.filter(select => select.key !== num)])
+    }
 
     const clearSearch = function () {
       setMovies(allMovies)
     }
 
 
-  const ToggleWatch = function (movie) {
-    console.log(movie)
-    //movie.watched
+  const ToggleWatch = function () {
+    setDisplay(false);
+    console.log("toggle")
+  }
+
+  const ToggleWatchTrue = function () {
+    setDisplay(true);
+  }
+
+  const SwitchWatched = function (movie) {
+    console.log('horayyy', movie)
+    setSeen(seen => [...seen, movie])
+    console.log("seen", seen)
+    removeTitle(movie.key);
 
   }
+
+
 
 
   const newAdd = function (input) {
     setAllMovies(allMovies => [...allMovies, {title: input.add, key: randomKey()}])
     setMovies(movies => [...movies, {title: input.add, key: randomKey()}])
   }
-
 
   return (
     <div className='container'>
@@ -72,10 +91,10 @@ const App = () => {
       </div>
       <h1 className='movieList'>Movie List</h1>
       <div className='toggleWatchIcons'>
-            <div className='watched'>Watched</div>
-            <div className='toWatch'>To Watch</div>
+            <button className='toWatch' onClick={()=> ToggleWatchTrue()}>To Watch</button>
+            <button className='watched' onClick={()=> ToggleWatch()}>Watched</button>
       </div>
-      <MovieList movies={movies} setMovies={setMovies} toggleWatch={ToggleWatch} allMovies={allMovies} setAllMovies={setAllMovies}/>
+      <MovieList movies={movies} setMovies={setMovies} ToggleWatch={ToggleWatch} allMovies={allMovies} setAllMovies={setAllMovies} SwitchWatched={SwitchWatched} removeTitle={removeTitle} seen={seen} display={display}/>
 
     </div>
   );

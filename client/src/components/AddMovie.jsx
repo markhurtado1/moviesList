@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddMovie ( { add, setAdd, newAdd,} ) {
+function AddMovie ( { add, setAdd, newAdd, randomKey} ) {
   return (
     <div className='addBar'>
       <input type="text" value={add} onChange={(event) => {

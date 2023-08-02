@@ -13,7 +13,6 @@ function Search( { text, setText, newSearch, clearSearch, setMovies, movies, sea
         setText('');
       }}> Go</button>
       <button className="clearBtn" onClick={(event) => {
-        // setMovies(movies);
         clearSearch();
       }}>Clear</button>
     </div>
