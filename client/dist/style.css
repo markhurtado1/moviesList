@@ -21,18 +21,27 @@ div.container {
   background-color: #F2A172;
   border: solid 3px #8C2703;
   border-radius: 10px;;
-  width: 200px;
+  width: 300px;
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 5px 0px;
+  margin-bottom: 10px;
+}
+.btn-delete {
+  justify-content: flex-end;
+  align-items: end;
+}
+.btn-watched {
+  justify-content: flex-end;
+  align-items: end;
 }
 .movieTitle {
   color: white;
 }
 .movieList {
   color: white;
-  border: solid 3px green;
 
 }
 .container {
@@ -47,14 +56,20 @@ div.container {
   align-items: flex-start;
 }
 .toggleWatchIcons {
-  border: solid 3px yellow;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 206px;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 35px;
+  margin-bottom: 10px;
 }
 .watched {
+  justify-content: end;
+  align-items: end;
+  color: black;
+}
+.toWatch {
   justify-content: start;
-  color: purple;
-  border: solid 3px blue;
+  align-items: start;
+  color: black;
 }

@@ -26,8 +26,10 @@ function Movie( {setAllMovies, allMovies, movie, ToggleWatch, index, setMovies, 
     }}>
       <h3 className='movieTitle'>{movie.title}
       </h3>
-      <button onClick={() => removeTitle(movie.key)}>X</button>
-      <button onClick={() => SwitchWatched(movie)}>Watched</button>
+      <div className='btn-container'>
+      <button className='btn-delete' onClick={() => removeTitle(movie.key)}>X</button>
+      <button className='btn-watched' onClick={() => SwitchWatched(movie)}>Watched</button>
+      </div>
     </div>
   )
 
